@@ -1,8 +1,8 @@
 import { useState } from "react";
-import logo from "./logo.svg";
+import logo from "../logo.svg";
 import "./App.css";
 
-const App = () => {
+export const AppUI = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -16,7 +16,13 @@ const App = () => {
         </p>
         <p>
           Edit <code>App.jsx</code>
+          <ul>
+            <li>sasas</li>
+            <li>sdsd</li>
+            <li>dsds</li>
+          </ul>
         </p>
+        <h1>ddsds</h1>
         <p>
           <a
             className="App-link"
@@ -40,5 +46,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
