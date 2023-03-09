@@ -1,12 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-// los componentes
+
+import { Game } from "../pages/Game";
 
 export function AppRouter() {
   return (
     <>
       <Routes>
-        <Route path="/juego" element={<p>juego</p>} />
+        <Route path="/juego" element={<Game />} />
         {/* registro */}
       </Routes>
     </>
