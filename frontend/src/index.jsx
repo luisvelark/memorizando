@@ -10,7 +10,7 @@ import "@fontsource/roboto/700.css";
 import { App } from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+//se implementara el estado global.
 root.render(
   <React.StrictMode>
     <App />
