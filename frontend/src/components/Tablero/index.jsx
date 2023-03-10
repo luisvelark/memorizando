@@ -13,6 +13,16 @@ export const Tablero = () => {
   const [unflippedCards, setUnflippedCards] = useState([]); //arreglo de cartas que vuelve a su estado normal
   const [disabledCards, setDisabledCards] = useState([]); //arreglo de cartas macheadas
 
+  //estado glogal
+  const [Attempt, setAttempt] = useState(0); //intento
+  const [success, setSuccess] = useState(0); //intento
+
+  useEffect(() => {
+    // AleatoryCards(deportes);
+    console.log(Attempt, "intento");
+    console.log(success, "acierto");
+  }, [Attempt, success]);
+
   useEffect(() => {
     // AleatoryCards(deportes);
     setCards(deportes);
@@ -55,12 +65,14 @@ export const Tablero = () => {
 
   const disableCards = () => {
     setDisabledCards([firstCard.number, secondCard.number]);
+    setSuccess(success + 1);
     resetCards();
   };
 
   // cartas que se van a voltear
   const unflipCards = () => {
     setUnflippedCards([firstCard.number, secondCard.number]);
+    setAttempt(Attempt + 1);
     resetCards();
   };
 
