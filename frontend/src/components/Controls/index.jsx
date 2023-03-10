@@ -9,7 +9,9 @@ import {
   Stack,
   Divider,
 } from "@mui/material/";
-import Difficulty from "../Difficulty";
+import { SelectDifficulty } from "../SelectDifficulty";
+import { SelectTopic } from "../SelectTopic";
+import { SelectTime } from "../SelectTime";
 // const Caja = styled(Card)`
 //   background-color: gris;
 //   height: 120px;
@@ -20,6 +22,7 @@ import Difficulty from "../Difficulty";
 //   }
 // `;
 
+// peticion a la base para que traiga las dificultades
 export const Controls = () => {
   // const [isFlipped, setIsFlipped] = useState(false);
 
@@ -44,9 +47,9 @@ export const Controls = () => {
         spacing={2}
         divider={<Divider orientation="vertical" flexItem />}
       >
-        <Difficulty />
-        <Difficulty />
-        <Difficulty />
+        <SelectDifficulty />
+        <SelectTopic />
+        <SelectTime />
       </Stack>
     </Stack>
   );

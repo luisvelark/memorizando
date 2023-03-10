@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container, Grid } from "@mui/material/";
 import { Tablero } from "../../Tablero";
 import { Controls } from "../../Controls";
+import { Timer } from "../../Timer";
 
 export const Game = () => {
   // const [count, setCount] = useState(0);
@@ -18,7 +19,7 @@ export const Game = () => {
       component="main"
     >
       <Grid item xs={3} sx={{ backgroundColor: "green", padding: "1em" }}>
-        <p>tiempo</p>
+        <Timer />
       </Grid>
       <Grid item xs={9} sx={{ backgroundColor: "orange", padding: "1em" }}>
         <Controls />
