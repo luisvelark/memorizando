@@ -8,6 +8,7 @@ import {
   Typography,
   Stack,
   Divider,
+  Button,
 } from "@mui/material/";
 import { SelectDifficulty } from "../SelectDifficulty";
 import { SelectTopic } from "../SelectTopic";
@@ -24,7 +25,7 @@ import { SelectTime } from "../SelectTime";
 
 // peticion a la base para que traiga las dificultades
 export const Controls = () => {
-  // const [isFlipped, setIsFlipped] = useState(false);
+  const [jugar, setJugar] = useState(false);
 
   // useEffect(() => {
 
@@ -50,6 +51,15 @@ export const Controls = () => {
         <SelectDifficulty />
         <SelectTopic />
         <SelectTime />
+        {!jugar ? (
+          <Button variant="contained" color="primary">
+            Jugar
+          </Button>
+        ) : (
+          <Button variant="contained" color="error">
+            Finalizar
+          </Button>
+        )}
       </Stack>
     </Stack>
   );
