@@ -8,7 +8,7 @@ import { Estado } from "../../Estado";
 import { NavBar } from "../../layout/NavBar";
 import { Footer } from "../../layout/Footer";
 
-export const Game = () => {
+export const GameView = () => {
   // const [count, setCount] = useState(0);
   const [jugar, setjugar] = useState(true); //estado global de un boton jugar
 
