@@ -4,12 +4,14 @@ import { Stack, Typography } from "@mui/material/";
 const MyFooter = styled("footer")`
   height: 30px;
   width: 100%;
-  min-width: 120px;
   padding: 1em;
-  background-color: blue;
+  background-color: gray;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
 `;
 
 export function Footer() {

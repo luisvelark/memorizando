@@ -21,7 +21,7 @@ export function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false); //si esta autentificado!
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -124,13 +124,14 @@ export function NavBar() {
             MEMORIZANDO MOVIL
           </Typography>
           {/* </BOTON HAMBURGUESA> */}
+
           {!auth ? (
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, mx: 3, color: "white", display: "block" }}
                 >
                   {page}
                 </Button>

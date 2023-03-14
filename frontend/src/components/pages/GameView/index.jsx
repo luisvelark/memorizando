@@ -23,8 +23,8 @@ export const GameView = () => {
         spacing={2}
         sx={{
           width: "100vw",
-          heght: "100vh",
-          backgroundColor: "red",
+          height: "100vh",
+          backgroundColor: "white",
           marginTop: "3.75em",
           paddingTop: "2em",
         }}

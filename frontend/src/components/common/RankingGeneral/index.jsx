@@ -9,30 +9,28 @@ import {
   Paper,
 } from "@mui/material/";
 
-import { resultados } from "../../const/ranking";
+import { ganadas } from "../../../const/general";
 
-export function Ranking() {
+export function RankingGeneral({ tipo }) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 270, padding: "2em" }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>N° de partida</TableCell>
-            <TableCell align="right">Aciertos</TableCell>
-            <TableCell align="right">Tiempo</TableCell>
+            <TableCell>Usuario</TableCell>
+            <TableCell align="right">tipo</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {resultados.map((res) => (
+          {ganadas.map((res) => (
             <TableRow
-              key={res.partida}
+              key={res.nombre}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {res.partida}
+                {res.nombre}
               </TableCell>
-              <TableCell align="right">{res.acierto}</TableCell>
-              <TableCell align="right">{res.tiempo}</TableCell>
+              <TableCell align="right">{res.ganada}</TableCell>
             </TableRow>
           ))}
         </TableBody>
