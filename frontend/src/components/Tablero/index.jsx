@@ -5,6 +5,7 @@ import { Grid } from "@mui/material/";
 import { MyCard } from "../MyCard";
 
 import { deportes } from "../../const/imagenes";
+import { faces } from "../../const/emojis";
 
 export const Tablero = () => {
   const [cards, setCards] = useState([]);
