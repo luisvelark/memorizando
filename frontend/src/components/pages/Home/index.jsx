@@ -20,10 +20,10 @@ export const Home = () => {
         direction="row"
         justifyContent="center"
         alignItems="flex-start"
-        spacing={2}
+        spacing={0}
         sx={{
           width: "100vw",
-          height: "100vh",
+          // height: "100vh",
           backgroundColor: "white",
           marginTop: "3.75em",
           paddingTop: "2em",
@@ -32,9 +32,14 @@ export const Home = () => {
       >
         <Grid
           item
-          xs={12}
+          xs={11}
           md={10}
-          sx={{ backgroundColor: "#ff5722", padding: "1em" }}
+          lg={10}
+          sx={{
+            backgroundColor: "#ff5722",
+            padding: "1em",
+            marginBottom: "1em",
+          }}
         >
           <Typography variant="h4" color="white" align="center">
             GANADORES 🏆️
@@ -42,19 +47,33 @@ export const Home = () => {
         </Grid>
         <Grid
           item
-          xs={12}
-          md={4}
+          xs={11}
+          md={10}
+          lg={3}
           sx={{ backgroundColor: "#ff5722", padding: "1em" }}
         >
-          <RankingGeneral />
+          <RankingGeneral title=" Ranking general🏆️" tipo="Victorias" />
         </Grid>
         <Grid
           item
-          xs={12}
-          md={4}
+          xs={11}
+          md={10}
+          lg={3}
           sx={{ backgroundColor: "#ff5722", padding: "1em" }}
         >
-          <RankingGeneral />
+          <RankingGeneral
+            title=" Ranking por Dificultad 🏆️"
+            tipo="Victorias"
+          />
+        </Grid>
+        <Grid
+          item
+          xs={11}
+          md={10}
+          lg={3}
+          sx={{ backgroundColor: "#ff5722", padding: "1em" }}
+        >
+          <RankingGeneral title=" Ranking por Velocidad 🏆️" tipo="Tiempo" />
         </Grid>
       </Grid>
       <Footer />
