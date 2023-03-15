@@ -10,6 +10,10 @@ const Caja = styled(Card)`
   height: 120px;
   min-width: 120px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   &:hover {
     transform: scale(0.95);
   }
@@ -24,7 +28,8 @@ const Img = styled("img")`
 const TypographyEmojis = styled(Typography)`
   width: 100%;
   min-width: 120px;
-  font-size: 2em;
+  font-size: 3.5em;
+  text-align: center;
 `;
 
 export const MyCard = ({
@@ -64,19 +69,12 @@ export const MyCard = ({
 
   return (
     <Caja>
-      <ReactCardFlip isFlipped={isFlipped}>
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
         <Img
           src={backFace}
           alt="back-face"
           onClick={hasEvent ? handleClick : null}
         />
-        {/* <TypographyEmojis
-          variant="body1"
-          color="initial"
-          onClick={hasEvent ? handleClick : null}
-        >
-          sello
-        </TypographyEmojis> */}
 
         <TypographyEmojis
           variant="body1"
