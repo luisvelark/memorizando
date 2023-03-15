@@ -21,6 +21,12 @@ const Img = styled("img")`
   min-width: 120px;
 `;
 
+const TypographyEmojis = styled(Typography)`
+  width: 100%;
+  min-width: 120px;
+  font-size: 2em;
+`;
+
 export const MyCard = ({
   name,
   number,
@@ -64,11 +70,27 @@ export const MyCard = ({
           alt="back-face"
           onClick={hasEvent ? handleClick : null}
         />
-        <Img
+        {/* <TypographyEmojis
+          variant="body1"
+          color="initial"
+          onClick={hasEvent ? handleClick : null}
+        >
+          sello
+        </TypographyEmojis> */}
+
+        <TypographyEmojis
+          variant="body1"
+          color="initial"
+          onClick={hasEvent ? handleClick : null}
+        >
+          {frontFace}
+        </TypographyEmojis>
+
+        {/* <Img
           src={frontFace}
           alt="front-face"
           onClick={hasEvent ? handleClick : null}
-        />
+        /> */}
       </ReactCardFlip>
     </Caja>
   );

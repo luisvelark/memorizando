@@ -25,8 +25,9 @@ export const Tablero = () => {
   }, [Attempt, success]);
 
   useEffect(() => {
+    const emojisFaces = [...faces, ...faces];
     // AleatoryCards(deportes);
-    setCards(deportes);
+    setCards(emojisFaces);
   }, []);
 
   useEffect(() => {
@@ -96,7 +97,7 @@ export const Tablero = () => {
           <MyCard
             name={dato.name}
             number={index}
-            frontFace={dato.url}
+            frontFace={dato.symbol}
             flipCard={flipCard}
             unflippedCards={unflippedCards}
             disabledCards={disabledCards}
