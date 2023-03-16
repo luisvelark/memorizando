@@ -10,7 +10,7 @@ import { Home } from "../components/pages/Home";
 
 // En la carpeta "App" se implementaran las rutas.
 export function App() {
-  const isLogged = true; // usa una variable de estado para verificar si el usuario está conectado
+  const isLogged = false; // usa una variable de estado para verificar si el usuario está conectado
   return (
     <BrowserRouter>
       <Routes>

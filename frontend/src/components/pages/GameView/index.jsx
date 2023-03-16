@@ -17,13 +17,12 @@ export const GameView = () => {
       <NavBar />
       <Grid
         container
-        direction="row"
         justifyContent="center"
         alignItems="flex-start"
         spacing={2}
         sx={{
           width: "100vw",
-          height: "100vh",
+          // height: "100vh",
           backgroundColor: "white",
           marginTop: "3.75em",
           paddingTop: "2em",
@@ -46,30 +45,56 @@ export const GameView = () => {
         >
           <Controls />
         </Grid>
+
         <Grid
+          container
+          item
+          direction="column"
+          justifyContent="flex-start"
+          alignItems="center"
+          // backgroundColor="red"
+          rowSpacing={2}
+          columnSpacing={2}
+          // spacing={2}
+          xs={3}
+          sx={{ overflow: "hidden" }}
+        >
+          <Grid
+            item
+            md="auto"
+            sx={{ backgroundColor: "green", padding: "1em" }}
+          >
+            <Estado />
+          </Grid>
+          <Grid item md="auto" sx={{ backgroundColor: "blue", padding: "1em" }}>
+            <Ranking />
+          </Grid>
+        </Grid>
+
+        {/* <Grid
           item
           xs={12}
           md={3}
           sx={{ backgroundColor: "green", padding: "1em" }}
         >
-          <Ranking />
-        </Grid>
+        </Grid> */}
         <Grid
           item
-          xs={12}
-          md={5}
+          // xs={12}
+          md={8}
           sx={{ backgroundColor: "yellow", padding: "1em" }}
         >
           {!jugar ? <p>vamos iniciar el juego</p> : <Tablero />}
         </Grid>
-        <Grid
+        {/* <Grid
           item
           xs={12}
-          md={3}
-          sx={{ backgroundColor: "green", padding: "1em" }}
+          md={12}
+          sx={{ backgroundColor: "blue", padding: "1em" }}
         >
-          <Estado />
-        </Grid>
+          <Ranking />
+        </Grid> */}
+
         {/* <Grid item xs={12 md={3}} sx={{ backgroundColor: "yellow" }}>
         <Tablero />
       </Grid> */}

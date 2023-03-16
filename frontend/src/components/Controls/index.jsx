@@ -35,15 +35,15 @@ export const Controls = () => {
     <Stack
       direction="column"
       justifyContent="center"
-      alignItems="flex-start"
+      alignItems="center"
       spacing={2}
     >
       <Typography variant="h4" gutterBottom>
         N° Partida: 000001
       </Typography>
       <Stack
-        direction="row"
-        justifyContent="flex-start"
+        direction={{ xs: "column", sm: "row" }}
+        justifyContent="center"
         alignItems="center"
         spacing={2}
         divider={<Divider orientation="vertical" flexItem />}

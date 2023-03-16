@@ -10,7 +10,7 @@ export function Estadistica({ title, data, icon }) {
       spacing={1}
       component="div"
     >
-      <Typography variant="h5" component="h3" align="justify">
+      <Typography variant="h7" component="h3" align="justify">
         {icon}
         {title}
       </Typography>
