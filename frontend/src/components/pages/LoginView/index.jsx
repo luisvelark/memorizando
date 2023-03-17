@@ -8,23 +8,13 @@ import { UserName } from "../../common/UserName";
 import { Password } from "../../common/Password";
 import { Presentation } from "../../common/Presentation";
 import { ButtonSbumit } from "../../common/BotonSubmit";
-
-// redux
-import { useSelector, useDispatch } from "react-redux";
-import { authenticateUser } from "../../../redux/actions";
+import { useLogin } from "../../../hooks/useLogin";
 
 export function LoginView() {
-  const { register, handleSubmit } = useForm();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const dispatch = useDispatch();
-
-  const onSubmit = (data) => {
-    console.log(data);
-    //llamada a la api de login
-    dispatch(authenticateUser(true));
-    navigate("/app/juego");
-  };
+  // const dispatch = useDispatch();
+  const { register, handleSubmit, onSubmit } = useLogin();
 
   return (
     <Stack
