@@ -14,6 +14,8 @@ import MenuItem from "@mui/material/MenuItem";
 // import AdbIcon from "@mui/icons-material/Adb";
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
 
+import { useSelector, useDispatch } from "react-redux";
+
 const pages = ["Registrarse", "Ingresá"];
 const settings = ["Logout"];
 
@@ -21,7 +23,10 @@ export function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
-  const [auth, setAuth] = useState(false); //si esta autentificado!
+  //si esta autentificado!
+  const auth = useSelector((state) => state.authenticate);
+
+  // const [auth, setAuth] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

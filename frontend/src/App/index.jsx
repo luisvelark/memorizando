@@ -6,11 +6,16 @@ import {
   AppRouter,
 } from "../components/router";
 
+import { useSelector, useDispatch } from "react-redux";
+
 import { Home } from "../components/pages/Home";
 
 // En la carpeta "App" se implementaran las rutas.
 export function App() {
-  const isLogged = false; // usa una variable de estado para verificar si el usuario está conectado
+  // usa una variable de estado para verificar si el usuario está conectado
+  const authenticate = useSelector((state) => state.authenticate);
+  console.log(authenticate, " routes");
+  // const isLogged = authenticate;
   return (
     <BrowserRouter>
       <Routes>
@@ -19,7 +24,7 @@ export function App() {
         <Route
           path="/auth/*"
           element={
-            <PublicRoutes isLogged={isLogged}>
+            <PublicRoutes isLogged={authenticate}>
               <AuthRouter />
             </PublicRoutes>
           }
@@ -28,7 +33,7 @@ export function App() {
         <Route
           path="/app/*"
           element={
-            <PrivateRoutes isLogged={isLogged}>
+            <PrivateRoutes isLogged={authenticate}>
               <AppRouter />
             </PrivateRoutes>
           }
