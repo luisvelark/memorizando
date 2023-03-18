@@ -24,6 +24,7 @@ export function useLogin() {
     }
     try {
       const response = await authLogin(data);
+      console.log(response);
 
       if (response.access) {
         //llamada a la api de login
@@ -39,7 +40,7 @@ export function useLogin() {
     } catch (error) {
       console.log(error);
     }
-
+    // dispatch(authenticateUser(true));
     navigate("/app/juego");
   };
 
